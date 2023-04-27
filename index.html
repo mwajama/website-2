@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Student Website</title>
+    <style>
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #456574;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      #home-section,
+      #about-section {
+        text-align: center;
+        padding: 50px;
+      }
+
+      #about-section {
+        display: none;
+      }
+      .profile-picture-rounded {
+        width: 25%; /* Adjust the width percentage as desired */
+        border-radius: 50%; /* Makes the image rounded */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MAINA JASON MWANGI</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a id="home-button" href="#">Home</a></li>
+        <li><a id="about-button" href="#">About Me</a></li>
+        <li><a id="Contact-button" href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div
+      id="home-section"
+      style="background-image: url('images/pexels-henry-&-co-1939485.jpg')"
+    >
+      <h2>Welcome to My Personal Website!</h2>
+      <p>
+        Thank you for visiting my website. Here, you'll find information about
+        me and my journey as a student.
+      </p>
+
+      <h3>TESTIMONIALS</h3>
+      <div class="testimonial">
+        <blockquote>
+          "Working with Jason has been a pleasure. His dedication, attention to
+          detail, and problem-solving abilities are commendable."
+        </blockquote>
+        <p>Lewis Kuria</p>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>
+          "Jason is talented and has a strong work ethic. He consistently
+          delivers high-quality work and collaborate effectively with team
+          members."
+        </blockquote>
+        <p>Isaac Kamau</p>
+      </div>
+
+      <a href="mailto:mainajsn@gmail.com" class="cta-button">Get in touch</a>
+    </div>
+
+    <div id="about-section" style="display: none">
+      <h2>About Me</h2>
+      <img
+        src="images/Profile.jpeg"
+        alt="Profile Picture"
+        class="profile-picture-rounded"
+      />
+      <p>
+        Hi, I am Maina Jason Mwangi, a dedicated and detail-oriented student
+        passionate about data management and analysis. I have a strong
+        educational background and the skills to handle various data-related
+        tasks as shown below.
+      </p>
+
+      <h3>Educational Background</h3>
+      <ul>
+        <li>
+          Bachelor of Science in Geospatial Information Science, Jomo Kenyatta
+          University of Agriculture and Technology
+        </li>
+        <li>
+          Relevant coursework: Geospatial Data Acquisition, Database Management,
+          Geospatial Data Analysis
+        </li>
+        <li>Academic Honors: Dean's List for consecutive semesters</li>
+      </ul>
+
+      <h3>Data-Related Tasks</h3>
+      <div class="tasks-grid">
+        <div class="task">
+          <img src="images/Data Entry.png" alt="Data Entry" />
+          <h4>Data Entry</h4>
+          <p>
+            I have experience in accurately entering large volumes of data into
+            databases or spreadsheets, ensuring data integrity and precision.
+          </p>
+        </div>
+        <div class="task">
+          <img src="images/Data display.png" alt="Data Display" />
+          <h4>Data Display</h4>
+          <p>
+            I can create visually appealing and informative data visualizations
+            using tools like Excel, Tableau, or Python libraries to effectively
+            present insights.
+          </p>
+        </div>
+        <div class="task">
+          <img src="images/Data management.png" alt="Data Management" />
+          <h4>Data Management</h4>
+          <p>
+            With my knowledge of database management systems, I can design and
+            optimize databases, ensuring efficient storage and retrieval of
+            data.
+          </p>
+        </div>
+        <div class="task">
+          <img
+            src="images/Information retrieval.png"
+            alt="Information Retrieval"
+          />
+          <h4>Information Retrieval</h4>
+          <p>
+            I have the skills to retrieve and extract relevant information from
+            databases or other sources, utilizing effective search techniques
+            and tools.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-section" style="display: none">
+      <h2>Contact Me</h2>
+      <p>
+        I would be delighted to hear from you! Feel free to reach out through
+        any of the following channels:
+      </p>
+
+      <ul>
+        <li>
+          Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a>
+        </li>
+        <li>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/yourname"
+            >linkedin.com/in/yourname</a
+          >
+        </li>
+        <li>
+          Twitter: <a href="https://twitter.com/yourusername">@yourusername</a>
+        </li>
+      </ul>
+
+      <p>Looking forward to connecting with you!</p>
+    </div>
+
+    <script>
+      // JavaScript code for handling page navigation
+      document.addEventListener("DOMContentLoaded", function () {
+        const homeButton = document.getElementById("home-button");
+        const aboutButton = document.getElementById("about-button");
+        const contactButton = document.getElementById("Contact");
+
+        const homeSection = document.getElementById("home-section");
+        const aboutSection = document.getElementById("about-section");
+        const contactSection = document.getElementById("Contact");
+
+        homeButton.addEventListener("click", function () {
+          homeSection.style.display = "block";
+          aboutSection.style.display = "none";
+          contactSection.style.display = "none";
+        });
+
+        aboutButton.addEventListener("click", function () {
+          homeSection.style.display = "none";
+          aboutSection.style.display = "block";
+          contactSection.style.display = "none";
+        });
+        contactButton.addEventListener("click", function () {
+          homeSection.style.display = "none";
+          aboutSection.style.display = "none";
+          contactSection.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>
